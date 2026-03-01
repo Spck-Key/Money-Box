@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Control - MoneyBed 3D</title>
+    <link rel="stylesheet" href="main-style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+</head>
+<body>
+    <div class="reg-box">
+        <h2 style="color: var(--gold);">Admin Panel</h2>
+        <input type="text" id="pName" placeholder="ကစားသမား နာမည်">
+        <input type="text" id="pPhone" placeholder="ဖုန်းနံပတ်">
+        <button onclick="createAccount()">CREATE ID & PASS</button>
+        <div id="idResult" style="margin-top:15px; display:none; border:1px solid var(--gold); padding:10px;"></div>
+        <button style="background: red; color: white; margin-top: 20px;" onclick="location.href='god_mode.html'">GO TO GOD MODE</button>
+    </div>
+    <script>
+        const firebaseConfig = { databaseURL: "https://moneybed-3d-4396b-default-rtdb.firebaseio.com" };
+        if (!firebase.apps.length) firebase.initializeApp(firebaseConfig);
+        const db = firebase.database();
+        function createAccount() {
+            const nm = document.getElementById('pName').value;
+            const ph = document.getElementById('pPhone').value;
+            if(!nm || !ph) return alert("ဖြည့်ပါ");
+            const ps = "MB" + Math.floor(1000 + Math.random() * 9000);
+            db.ref('users/' + ph).set({ username: nm, password: ps, balance: 0 })
+            .then(() => {
+                const box = document.getElementById('idResult');
+                box.style.display = "block";
+                box.innerHTML = `ID: ${ph}<br>Pass: ${ps}`;
+            });
+        }
+    </script>
+</body>
+</html>

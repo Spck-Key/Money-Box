@@ -1,0 +1,6 @@
+:root { --gold: #d4af37; --bg: #000; --card: #121212; }
+body { background: var(--bg); color: white; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+.login-box, .reg-box { background: var(--card); padding: 30px; border-radius: 15px; border: 1px solid var(--gold); text-align: center; width: 85%; max-width: 350px; }
+input { width: 100%; padding: 12px; margin: 10px 0; background: #080808; border: 1px solid #333; color: white; border-radius: 8px; box-sizing: border-box; }
+button { width: 100%; padding: 12px; background: linear-gradient(135deg, #fceabb 0%, var(--gold) 100%); border: none; border-radius: 8px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+.card-3d { width: 60px; height: 90px; background: white; color: black; border-radius: 5px; margin: 5px; display: inline-block; font-weight: bold; padding-top: 10px; border: 2px solid var(--gold); }

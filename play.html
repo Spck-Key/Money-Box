@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoneyBed 3D - Table</title>
+    <link rel="stylesheet" href="main-style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="game-logic.js"></script>
+    <script src="app-ui.js"></script>
+    <script src="game-engine.js"></script>
+</head>
+<body onload="initGame()">
+    <div style="position: absolute; top: 10px; left: 10px; color: var(--gold);" id="balance">Balance: 0 MMK</div>
+    
+    <div class="game-container" style="text-align: center; width: 100%;">
+        <h2 id="game-status" style="margin-top: 50px;">ဂိမ်းစတင်နေသည်...</h2>
+        
+        <div id="game-board" style="min-height: 150px; margin: 20px 0;">
+            </div>
+
+        <div class="controls">
+            <button onclick="drawThirdCard()" style="width: 120px; margin-right: 10px;">ဖဲဆွဲမည်</button>
+            <button onclick="initGame()" style="width: 120px; background: gray;">အသစ်ပြန်စ</button>
+        </div>
+    </div>
+
+    <script>
+        const firebaseConfig = { databaseURL: "https://moneybed-3d-4396b-default-rtdb.firebaseio.com" };
+        if (!firebase.apps.length) firebase.initializeApp(firebaseConfig);
+        
+        // အကောင့်ထဲက ပိုက်ဆံပမာဏကို ပြရန်
+        const currentPh = localStorage.getItem('currentUser');
+        if(currentPh) {
+            firebase.database().ref('users/' + currentPh).on('value', (snap) => {
+                const data = snap.val();
+                if(data) document.getElementById('balance').innerText = `Balance: ${data.balance} MMK`;
+            });
+        }
+    </script>
+</body>
+</html>
