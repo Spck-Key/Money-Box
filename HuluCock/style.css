@@ -1,0 +1,9 @@
+body { background: #4b0082; color: white; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+.hulu-table { background: #2d004d; padding: 30px; border-radius: 20px; border: 5px solid #ffd700; text-align: center; width: 380px; }
+.dice-box { display: flex; justify-content: center; gap: 15px; margin: 25px 0; }
+.h-dice { width: 70px; height: 70px; background: white; color: black; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 35px; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+.status-box { font-size: 20px; margin-bottom: 20px; color: gold; height: 30px; }
+.hulu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+button { padding: 15px 5px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; background: #ffd700; color: #2d004d; transition: 0.2s; }
+button:hover { background: #fff; }
+button:active { transform: scale(0.9); }

@@ -1,0 +1,10 @@
+body { background: #013220; color: white; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; font-family: sans-serif; }
+.poker-table { background: #004d40; border: 10px solid #5d4037; border-radius: 100px; padding: 50px; text-align: center; box-shadow: inset 0 0 50px #000; width: 80%; max-width: 600px; }
+.dealer-info { color: #ffd700; font-weight: bold; margin-bottom: 20px; }
+.hand { display: flex; justify-content: center; gap: 10px; min-height: 120px; }
+.card { width: 70px; height: 100px; background: white; color: black; border-radius: 8px; font-size: 24px; font-weight: bold; display: flex; flex-direction: column; justify-content: center; border: 2px solid #ccc; animation: flip 0.5s; }
+.status-box { background: rgba(0,0,0,0.5); padding: 15px; border-radius: 10px; margin: 20px 0; }
+.action-btn { padding: 10px 20px; font-weight: bold; cursor: pointer; border-radius: 5px; border: none; }
+.raise { background: #ffc107; color: black; }
+.fold { background: #f44336; color: white; margin-left: 10px; }
+@keyframes flip { from { transform: rotateY(90deg); } to { transform: rotateY(0); } }

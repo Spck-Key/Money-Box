@@ -4,32 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MoneyBed 3D - Login</title>
-    <link rel="stylesheet" href="main-style.css">
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <style>
+        body { margin: 0; background: #000 url('1000020838.png') no-repeat center center fixed; background-size: cover; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; }
+        .login-box { background: rgba(0, 0, 0, 0.85); padding: 30px; border-radius: 15px; border: 2px solid #ffd700; text-align: center; width: 320px; }
+        input { width: 90%; padding: 12px; margin: 10px 0; border-radius: 8px; border: 1px solid #ffd700; background: #1a1a1a; color: #fff; outline: none; }
+        button { width: 100%; padding: 12px; background: linear-gradient(to bottom, #ffd700, #b8860b); border: none; font-weight: bold; cursor: pointer; border-radius: 8px; margin-top: 10px; }
+    </style>
 </head>
 <body>
     <div class="login-box">
-        <h1 style="color: #d4af37;">MoneyBed 3D</h1>
-        <input type="text" id="loginPhone" placeholder="ဖုန်းနံပတ် ထည့်ပါ">
-        <input type="password" id="loginPass" placeholder="Password ထည့်ပါ">
-        <button onclick="handleLogin()">LOGIN</button>
-        <p>အကောင့်မရှိသေးပါက <a href="register.html" style="color: #d4af37;">ဒီမှာဖွင့်ပါ</a></p>
+        <h2 style="color: gold; text-shadow: 0 0 10px gold;">MoneyBed 3D</h2>
+        <input type="text" id="phone" placeholder="ဖုန်းနံပါတ်">
+        <input type="text" id="name" placeholder="အမည်">
+        <input type="password" id="admin_id" placeholder="ID"> <button onclick="checkLogin()">ဝင်မည်</button>
     </div>
-    <script>
-        const firebaseConfig = { databaseURL: "https://moneybed-3d-4396b-default-rtdb.firebaseio.com" };
-        if (!firebase.apps.length) { firebase.initializeApp(firebaseConfig); }
-        const db = firebase.database();
-        function handleLogin() {
-            const ph = document.getElementById('loginPhone').value;
-            const pw = document.getElementById('loginPass').value;
-            db.ref('users/' + ph).once('value', (snap) => {
-                if(snap.exists() && snap.val().password === pw) {
-                    localStorage.setItem('currentUser', ph);
-                    window.location.href = 'home.html';
-                } else { alert("အချက်အလက် မှားယွင်းနေပါသည်။"); }
-            });
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <title>Dragon Tiger - MoneyBed 3D</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="casino-table">
+        <h2 style="color: gold;">ကျားနဂါး (Dragon vs Tiger)</h2>
+        
+        <div class="display-area">
+            <div class="card-box">
+                <div class="label" style="color: #3498db;">နဂါး (Dragon)</div>
+                <div id="dragon-card" class="card-slot">?</div>
+            </div>
+            
+            <div class="vs-text">VS</div>
+
+            <div class="card-box">
+                <div class="label" style="color: #e74c3c;">ကျား (Tiger)</div>
+                <div id="tiger-card" class="card-slot">?</div>
+            </div>
+        </div>
+
+        <div id="result-msg" class="message">လောင်းကြေးတင်ပါ</div>
+
+        <div class="betting-zone">
+            <button class="bet-btn dragon" onclick="playGame('dragon')">နဂါးလောင်းမည်</button>
+            <button class="bet-btn tie" onclick="playGame('tie')">သရေ (Tie)</button>
+            <button class="bet-btn tiger" onclick="playGame('tiger')">ကျားလောင်းမည်</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

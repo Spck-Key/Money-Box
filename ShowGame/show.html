@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <title>Show Poker - MoneyBed 3D</title>
+    <link rel="stylesheet" href="show.css">
+</head>
+<body>
+    <div class="poker-table">
+        <div class="dealer-info">ဒိုင်စားကော်: 3%</div>
+        
+        <div class="cards-display">
+            <div id="poker-hand" class="hand"></div>
+        </div>
+
+        <div class="status-box">
+            <div id="rank-name">ရှိုးအမျိုးအစား: -</div>
+            <div id="pot-amount">စုစုပေါင်းလောင်းကြေး: 0</div>
+        </div>
+
+        <div class="controls">
+            <button class="action-btn" onclick="dealCard()">ဖဲတစ်ချပ်လှန်</button>
+            <button class="action-btn raise" onclick="raiseBet()">ကြေးတိုး</button>
+            <button class="action-btn fold" onclick="resetShow()">အသစ်ပြန်စ</button>
+        </div>
+    </div>
+    <script src="show.js"></script>
+</body>
+</html>

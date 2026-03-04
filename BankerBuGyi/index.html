@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <title>Banker BuGyi - MoneyBed 3D</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h2 style="color: #ffd700;">ဘူကြီး (ပိုင်ရှင်ဒိုင်စနစ်)</h2>
+        
+        <div id="setup-area" class="panel">
+            <p>ဒိုင်အာမခံကြေး (၅၀ ဆ သတ်မှတ်ချက်)</p>
+            <select id="bet-select" onchange="updateInfo()">
+                <option value="500">၅၀၀ ကျပ်တန်ဝိုင်း</option>
+                <option value="1000" selected>၁,၀၀၀ ကျပ်တန်ဝိုင်း</option>
+                <option value="5000">၅,၀၀၀ ကျပ်တန်ဝိုင်း</option>
+            </select>
+            <div id="info" class="info-text">လိုအပ်ငွေ: ၅၀,၀၀၀ ကျပ်</div>
+            <button class="btn-main" onclick="enterGame()">ဒိုင်ဝင်ထိုင်မည်</button>
+        </div>
+
+        <div id="play-area" class="panel hidden">
+            <div class="hand">
+                <div class="label">ဒိုင် (Banker)</div>
+                <div id="d-cards" class="card-row"></div>
+                <div id="d-result" class="status">-</div>
+            </div>
+            <div class="hand">
+                <div id="p-result" class="status">-</div>
+                <div id="p-cards" class="card-row"></div>
+                <div class="label">ကစားသမား (Player)</div>
+            </div>
+            <div class="controls">
+                <button class="btn-deal" onclick="playRound()">ဖဲဝေမည်</button>
+                <button onclick="location.reload()">ထွက်မည်</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

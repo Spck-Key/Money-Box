@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <title>Baccarat Casino - MoneyBed 3D</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="baccarat-table">
+        <h2 style="color: #ffd700;">ဘာကာရက် (Baccarat)</h2>
+        
+        <div class="game-view">
+            <div class="side">
+                <div class="label blue">PLAYER</div>
+                <div id="player-cards" class="cards"></div>
+                <div id="player-score" class="score">0</div>
+            </div>
+            
+            <div class="side">
+                <div class="label red">BANKER</div>
+                <div id="banker-cards" class="cards"></div>
+                <div id="banker-score" class="score">0</div>
+            </div>
+        </div>
+
+        <div id="result-status" class="status">လောင်းကြေးတင်ပါ</div>
+
+        <div class="bet-options">
+            <button class="bet-btn p-btn" onclick="playBaccarat('player')">PLAYER</button>
+            <button class="bet-btn t-btn" onclick="playBaccarat('tie')">TIE</button>
+            <button class="bet-btn b-btn" onclick="playBaccarat('banker')">BANKER</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

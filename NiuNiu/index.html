@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <title>Niu Niu (Singapore) - MoneyBed 3D</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="niu-table">
+        <h2 style="color: #ffd700;">နွားနွား (Niu Niu)</h2>
+        
+        <div class="hand-section">
+            <div class="label">ဒိုင် (Dealer)</div>
+            <div id="dealer-hand" class="cards"></div>
+            <div id="dealer-result" class="badge">?</div>
+        </div>
+
+        <div class="hand-section">
+            <div id="player-result" class="badge">?</div>
+            <div id="player-hand" class="cards"></div>
+            <div class="label">လူကြီးမင်း (Player)</div>
+        </div>
+
+        <div class="ui">
+            <button class="btn-deal" onclick="startNiuNiu()">ဖဲဝေမည်</button>
+            <button onclick="location.reload()">ပြန်စမည်</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

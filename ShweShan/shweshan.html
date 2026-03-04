@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shwe Shan - MoneyBed 3D</title>
+    <link rel="stylesheet" href="shweshan.css">
+</head>
+<body>
+    <div class="table">
+        <h1 class="title">ရွှေရှမ်း (Shwe Shan)</h1>
+        
+        <div class="dealer-area">
+            <div class="label">ဒိုင် (Dealer)</div>
+            <div id="dealer-hand" class="cards"></div>
+            <div id="dealer-point" class="point">? မှတ်</div>
+        </div>
+
+        <div class="vs-line">VS</div>
+
+        <div class="player-area">
+            <div id="player-point" class="point">? မှတ်</div>
+            <div id="player-hand" class="cards"></div>
+            <div class="label">ကစားသူ (Player)</div>
+        </div>
+
+        <div class="ui-panel">
+            <div class="balance">လက်ကျန်: <span id="money">50000</span></div>
+            <div class="bet-controls">
+                <button onclick="adjustBet(-500)">-</button>
+                <span id="bet-display">500</span>
+                <button onclick="adjustBet(500)">+</button>
+            </div>
+            <button class="play-btn" onclick="playShweShan()">ဖဲလှန်မည်</button>
+        </div>
+    </div>
+
+    <script src="shweshan.js"></script>
+</body>
+</html>

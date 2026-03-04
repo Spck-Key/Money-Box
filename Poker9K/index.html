@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <title>Poker 9K - MoneyBed 3D</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="poker-table">
+        <h2 style="color: #ffd700;">ပိုကာကိုး (Poker 9K)</h2>
+        
+        <div class="area dealer">
+            <div class="label">ဒိုင် (Dealer)</div>
+            <div id="dealer-cards" class="cards"></div>
+            <div id="dealer-rank" class="rank">?</div>
+        </div>
+
+        <div class="area player">
+            <div id="player-rank" class="rank">?</div>
+            <div id="player-cards" class="cards"></div>
+            <div class="label">လူကြီးမင်း (Player)</div>
+        </div>
+
+        <div class="actions">
+            <button class="deal-btn" onclick="start9K()">ဖဲလှန်မည်</button>
+            <button onclick="location.reload()">ပြန်စမည်</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
