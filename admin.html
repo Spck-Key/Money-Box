@@ -5,87 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Master Admin - MoneyBed 3D</title>
     <style>
-        /* ... (အရင်ရှိပြီးသား Style များအတိုင်း) ... */
         * { box-sizing: border-box; }
-        body { background: #0f0f0f; color: #e0e0e0; font-family: 'Pyidaungsu', sans-serif; margin: 0; padding: 20px; }
-        .container { max-width: 900px; margin: 0 auto; }
+        body { background: #0f0f0f; color: #e0e0e0; font-family: sans-serif; margin: 0; padding: 20px; }
+        .container { max-width: 600px; margin: 0 auto; }
         header { background: linear-gradient(45deg, #b8860b, #ffd700); color: #000; padding: 20px; border-radius: 15px; text-align: center; margin-bottom: 20px; }
-        .stats-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 25px; }
-        .stat-card { background: #1e1e1e; padding: 20px; border-radius: 12px; border: 1px solid #333; text-align: center; }
-        .stat-card h3 { font-size: 14px; color: #888; margin: 0 0 10px 0; }
-        .stat-card .value { font-size: 24px; font-weight: bold; color: #ffd700; }
-        .control-panel { background: #252525; padding: 25px; border-radius: 15px; border-left: 5px solid #2ecc71; margin-bottom: 25px; }
-        .slider-box { margin: 20px 0; }
-        input[type="range"] { width: 100%; height: 10px; border-radius: 5px; background: #444; outline: none; }
-        .game-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
-        .game-link { background: #333; color: #fff; text-decoration: none; padding: 15px; border-radius: 8px; text-align: center; font-size: 13px; transition: 0.3s; border: 1px solid #444; }
-        .game-link:hover { background: #ffd700; color: #000; transform: translateY(-3px); }
-        .banker-special { border: 2px solid #ffd700; background: #2a2200; }
-        .footer { text-align: center; margin-top: 40px; color: #555; font-size: 12px; }
+        .game-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; }
+        .game-link { background: #333; color: #fff; text-decoration: none; padding: 20px; border-radius: 10px; text-align: center; font-weight: bold; border: 1px solid #ffd700; }
+        .game-link:hover { background: #ffd700; color: #000; }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>MoneyBed 3D Admin Panel</h1>
-            <p>ဂိမ်းထိန်းချုပ်ရေးနှင့် စာရင်းအင်းဗဟို</p>
+            <h1>Admin Dashboard</h1>
+            <p>ဂိမ်းများကို ဤနေရာမှ တိုက်ရိုက်ဝင်ပါ</p>
         </header>
 
-        <div class="stats-row">
-            <div class="stat-card">
-                <h3>စုစုပေါင်း ကော်မရှင် (5%)</h3>
-                <div class="value" id="total-comm">0.00 Ks</div>
-            </div>
-            <div class="stat-card">
-                <h3>လက်ရှိ ဒိုင်အမြတ် (AI)</h3>
-                <div class="value" style="color: #2ecc71;">+30%</div>
-            </div>
-            <div class="stat-card">
-                <h3>စုစုပေါင်း ကစားသူ</h3>
-                <div class="value">1,248</div>
-            </div>
-        </div>
-
-        <div class="control-panel">
-            <h3> AI Win-Rate ထိန်းချုပ်ခြင်း</h3>
-            <div class="slider-box">
-                <label>ဒိုင်အသာစီးရမှု ချိန်ညှိရန်: <span id="rate-text" style="color: #ffd700; font-weight: bold;">30</span>%</label>
-                <input type="range" min="0" max="100" value="30" id="win-rate-slider" oninput="updateWinRate(this.value)">
-            </div>
-        </div>
-
-        <h3> ဂိမ်းများသို့ တိုက်ရိုက်သွားရန်</h3>
         <div class="game-grid">
-            <a href="MoneyBed 3D/BankerShan/index.html" class="game-link banker-special"> ပိုင်ရှင်ဒိုင် ရှမ်းကိုးမီး</a>
-            <a href="MoneyBed 3D/BankerBuGyi/index.html" class="game-link banker-special"> ပိုင်ရှင်ဒိုင် ဘူကြီး</a>
-            
-            <a href="MoneyBed 3D/ShanKoeMee/index.html" class="game-link">ရှမ်းကိုးမီး</a>
-            <a href="MoneyBed 3D/BuGyi/index.html" class="game-link">ဘူကြီး</a>
-            <a href="MoneyBed 3D/ShweShan/index.html" class="game-link">ရွှေရှမ်း</a>
-            <a href="MoneyBed 3D/ShowGame/index.html" class="game-link">ရှိုးဂိမ်း</a>
-            <a href="MoneyBed 3D/Poker9K/index.html" class="game-link">ပိုကာကိုး</a>
-            <a href="MoneyBed 3D/Blackjack21/index.html" class="game-link">၂၁ ဂိမ်း</a>
-            <a href="MoneyBed 3D/Baccarat/index.html" class="game-link">ဘာကာရက်</a>
-            <a href="MoneyBed 3D/DragonTiger/index.html" class="game-link">ကျားနဂါး</a>
+            <a href="MoneyBed%203D/BankerShan/index.html" class="game-link"> ဒိုင် ရှမ်းကိုးမီး</a>
+            <a href="MoneyBed%203D/BankerBuGyi/index.html" class="game-link"> ဒိုင် ဘူကြီး</a>
+            <a href="MoneyBed%203D/ShanKoeMee/index.html" class="game-link">ရှမ်းကိုးမီး</a>
+            <a href="MoneyBed%203D/BuGyi/index.html" class="game-link">ဘူကြီး</a>
+            <a href="MoneyBed%203D/Baccarat/index.html" class="game-link">ဘာကာရက်</a>
+            <a href="MoneyBed%203D/FishHunter/index.html" class="game-link">ငါးဖမ်းဂိမ်း</a>
         </div>
-
-        <div class="footer">
-            &copy; 2026 MoneyBed 3D Gaming System. All Rights Reserved.
+        
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="index.html" style="color: #ffd700;"> Login သို့ပြန်သွားရန်</a>
         </div>
     </div>
-
-    <script>
-        function updateWinRate(val) {
-            document.getElementById('rate-text').innerText = val;
-            localStorage.setItem('dealerWinRate', val);
-        }
-        window.onload = function() {
-            let totalComm = localStorage.getItem('totalComm') || "0.00";
-            document.getElementById('total-comm').innerText = totalComm + " Ks";
-            let savedRate = localStorage.getItem('dealerWinRate') || 30;
-            document.getElementById('win-rate-slider').value = savedRate;
-            document.getElementById('rate-text').innerText = savedRate;
-        }
-    </script>
 </body>
 </html>
