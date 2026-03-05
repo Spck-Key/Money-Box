@@ -1,8 +1,0 @@
-body { background: #1e272e; color: white; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-.game-board { background: #2c3e50; padding: 40px; border-radius: 20px; border: 5px solid #f1c40f; text-align: center; width: 350px; }
-.card-display { display: flex; justify-content: space-around; margin: 30px 0; }
-.card { width: 70px; height: 100px; background: white; color: black; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold; border: 2px solid #bdc3c7; }
-.hidden { background: #34495e; color: #34495e; border: 2px dashed #f1c40f; }
-.msg { font-size: 20px; color: gold; margin-bottom: 20px; min-height: 25px; }
-button { padding: 10px 20px; background: #f1c40f; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; margin: 5px; }
-.hide { display: none; }
