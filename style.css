@@ -1,94 +1,164 @@
-body{
-
-margin:0;
-font-family:Arial;
-background:#0a0a0a;
-color:white;
-text-align:center;
-
+/* -------------------- General Body -------------------- */
+body {
+  background: #111;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
-
-.header{
-
-background:#111;
-padding:20px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-
-box-shadow:0 0 20px black;
-
+/* -------------------- Login / Lobby Container -------------------- */
+.login {
+  width: 320px;
+  max-width: 90%;
+  margin: 100px auto 50px auto;
+  background: #222;
+  padding: 25px;
+  border-radius: 10px;
 }
 
-.logo{
-
-font-size:26px;
-color:gold;
-font-weight:bold;
-
+/* -------------------- Inputs -------------------- */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 
-.balanceBox{
-
-font-size:18px;
-color:#00ff88;
-
+/* -------------------- ID + Eye Button -------------------- */
+.idrow {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
-
-.lobby{
-
-margin-top:60px;
-
+.idrow input {
+  flex: 1;
 }
 
-
-.games{
-
-margin-top:40px;
-
+.eye {
+  width: 45px;
+  border: none;
+  border-radius: 5px;
+  background: #ddd;
+  cursor: pointer;
 }
 
-
-.gameBtn{
-
-width:220px;
-height:70px;
-
-font-size:22px;
-
-margin:15px;
-
-border:none;
-
-border-radius:12px;
-
-background:linear-gradient(45deg,#ffd700,#ff8c00);
-
-color:black;
-
-cursor:pointer;
-
-transition:0.3s;
-
-box-shadow:0 0 10px gold;
-
+/* -------------------- Login Row -------------------- */
+.loginrow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
 }
 
-
-.gameBtn:hover{
-
-transform:scale(1.1);
-
-box-shadow:0 0 20px gold;
-
+/* -------------------- Buttons -------------------- */
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
+.loginbtn {
+  background: #28a745;
+  color: white;
+}
 
-.footer{
+.unitbtn {
+  background: #f39c12;
+  margin-top: 10px;
+}
 
-margin-top:100px;
-color:gray;
+/* -------------------- Lobby Games -------------------- */
+.games {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 20px;
+}
 
+.game {
+  padding: 15px;
+  background: gold;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* -------------------- Table -------------------- */
+.table {
+  width: 90%;
+  max-width: 600px;
+  margin: 50px auto;
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.players {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.player {
+  background: #333;
+  padding: 10px;
+  border-radius: 5px;
+  width: 80px;
+  color: white;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.player.ai {
+  background: #555;
+}
+
+.player.owner {
+  background: #aa8800;
+}
+
+/* -------------------- Play Buttons -------------------- */
+.playbtn {
+  background: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px 2px;
+  font-weight: bold;
+}
+
+/* -------------------- Responsive / Mobile Friendly -------------------- */
+@media (max-width: 480px) {
+  .login {
+    width: 95%;
+    margin-top: 50px;
+  }
+
+  .players {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .player {
+    width: 60%;
+  }
+
+  .game {
+    font-size: 14px;
+    padding: 12px;
+  }
 }

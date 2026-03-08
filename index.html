@@ -1,70 +1,53 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-
 <meta charset="UTF-8">
-<title>MoneyBed3D Casino</title>
-
+<title>MoneyBed 3D</title>
 <link rel="stylesheet" href="style.css">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 
-<div class="header">
+<div class="login">
 
-<div class="logo">
- MoneyBed3D Casino
-</div>
+  <h1>MoneyBed 3D</h1>
 
-<div class="balanceBox">
-Units : <span id="balance">10000</span>
-</div>
+  <!-- Phone and Name Inputs -->
+  <input type="text" placeholder="ဖုန်းနံပတ်">
+  <input type="text" placeholder="နာမည်">
 
-</div>
+  <!-- ID + Eye toggle -->
+  <div class="idrow">
+    <input type="password" id="id" placeholder="ID">
+    <button class="eye" onclick="showID()">
+      <img src="assets/images/eye.png" alt="Show ID" style="width:20px; height:20px;">
+    </button>
+  </div>
 
+  <!-- Login row -->
+  <div class="loginrow">
+    <button class="loginbtn" onclick="login()">ဝင်ရန်</button>
+    <label>
+      <input type="checkbox"> မှတ်ထားရန်
+    </label>
+  </div>
 
-<div class="lobby">
+  <br>
 
-<h2>Casino Games</h2>
+  <!-- Language selection -->
+  <select>
+    <option>မြန်မာ</option>
+    <option>English</option>
+  </select>
 
-<div class="games">
+  <br><br>
 
-<button onclick="playSlot()" class="gameBtn">
- SLOT
-</button>
-
-<button onclick="playCards()" class="gameBtn">
- CARD GAME
-</button>
-
-<button onclick="playBull()" class="gameBtn">
- BULL GAME
-</button>
-
-<button onclick="playDragon()" class="gameBtn">
- DRAGON TIGER
-</button>
-
-<button onclick="playBigSmall()" class="gameBtn">
- BIG SMALL
-</button>
+  <!-- Unit top-up -->
+  <button class="unitbtn" onclick="alert('Unit ထည့်ရန် Owner နဲ့ဆက်သွယ်ပါ')">ယူနစ်ဖြည့်ရန်</button>
 
 </div>
 
-</div>
-
-
-<div class="footer">
-
-MoneyBed3D  Casino System
-
-</div>
-
-
-<script src="app.js"></script>
-
+<script src="script.js"></script>
 </body>
-
 </html>
